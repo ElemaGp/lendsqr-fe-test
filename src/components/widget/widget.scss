@@ -1,13 +1,16 @@
+@import "../../app.scss";
+
 .widget {
   box-sizing: border-box;
   flex: 1;
-  
   height: 150px;
   width: 200px;
   background: #FFFFFF;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
+
+  
 
     .widgetContents{
       margin-left: 30px;

@@ -1,3 +1,6 @@
+@import "../../app.scss";
+
+
 .navbar {
     height: 100px;
     display: flex;
@@ -5,8 +8,8 @@
     font-size: 14px;
     color: #555;
     box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
     
-  
     .wrapper {
       width: 100%;
       display: flex;
@@ -14,8 +17,7 @@
       justify-content: space-between;
       margin-left: 30px;
       margin-right: 70px;
-      
-      
+
       .navLeft{
         display: flex;
         align-items: center;
@@ -25,6 +27,11 @@
           width: 144.8px;
           height: 30px;
           margin-right: 168.2px;
+
+          @include tablet{
+            margin-right: 17px;
+
+          }
           
         }
 
@@ -37,6 +44,8 @@
         height: 40px;
         justify-content: space-between;
         border-radius:  0 10px 10px 0;
+
+        
   
         input {
           border: none;
@@ -71,12 +80,34 @@
         display: flex;
         align-items: center;
 
+        .docs{
+          font-family: 'Roboto';
+          font-style: "normal"; 
+          font-weight: 400; 
+          font-size: "16px"; 
+          text-decoration-line: "underline"; 
+          color: #213F7D;
+          margin-right: 47px;
+
+          @include tablet{
+            margin-right: 0px;
+            margin-left: 12px;
+
+          }
+        }
+
+
         .bellIcon{
           margin-right: 33.16px;
           cursor: pointer;
           .icon {
             font-size: 30px;
             color: #213F7D;
+
+            @include tablet{
+              margin-right: 0px;
+    
+            }
           }
         }
   
@@ -101,12 +132,23 @@
           font-weight: 500;
           margin-right: 10.33px;
           cursor: pointer;
+
+          @include tablet{
+            display: none;
+
+          }
         }
 
         .navDropDown{
           width: 7.34px;
           height: 4.15px;
           cursor: pointer;
+
+          @include tablet{
+            width: 24px;
+          height: 10px;
+          cursor: pointer;
+          }
           
         }
         

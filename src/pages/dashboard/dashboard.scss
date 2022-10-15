@@ -1,6 +1,10 @@
+@import "../../app.scss";
+
 .home {
     display: flex;
     flex-direction: column;
+
+    
   
     .homeContainer {
       display: flex;
@@ -23,6 +27,12 @@
          display: flex;
          padding: 40px 60px;
          gap: 26px;
+
+         @include tablet{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      
+        }
        }
      
        .listContainer {

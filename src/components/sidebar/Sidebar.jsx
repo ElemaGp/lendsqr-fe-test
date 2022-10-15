@@ -29,9 +29,9 @@ const Sidebar = () => {
       <div className="center">
         
           <div className="sideBarTop">
-            <img src={briefcase} alt="briefcase" />
-            <span>Switch Organization</span>
-            <img src={dropdown2} alt="dropdown2" />
+            <img src={briefcase} alt="briefcase" className="briefcase" />
+            <span className="sidebarSwitch">Switch Organization</span>
+            <img src={dropdown2} alt="dropdown2" className="dropdown2" />
           </div>
           
             <div className="dash">
