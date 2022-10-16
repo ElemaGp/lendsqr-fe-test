@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./tablesource.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Filter from "../../pages/filter/Filter";
 
 
 const TableSource = () => {
@@ -107,6 +108,7 @@ const TableSource = () => {
         
       />
       
+      <Filter />
     </div>
   )
 }
