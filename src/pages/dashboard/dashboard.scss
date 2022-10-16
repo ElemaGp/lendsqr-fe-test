@@ -1,0 +1,43 @@
+.home {
+    display: flex;
+    flex-direction: column;
+  
+    .homeContainer {
+      display: flex;
+      
+      .homeRight {
+        display: flex;
+        flex-direction: column;
+        flex: 6;
+        
+        .widgetTitle{
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 28px;
+          color: #213F7D;
+          margin-left: 60px;
+          margin-top: 60px;
+        }
+  
+       .widgets {
+         display: flex;
+         padding: 40px 60px;
+         gap: 26px;
+       }
+     
+       .listContainer {
+         -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+         box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+         margin: 60px;
+         margin-top: 0;
+         
+        }
+
+      }
+       
+    }
+  }
+ 
+   
+  
+  

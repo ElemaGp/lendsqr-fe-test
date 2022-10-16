@@ -1,0 +1,116 @@
+.navbar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    
+  
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 30px;
+      margin-right: 70px;
+      
+      
+      .navLeft{
+        display: flex;
+        align-items: center;
+        
+
+        .navLogo{
+          width: 144.8px;
+          height: 30px;
+          margin-right: 168.2px;
+          
+        }
+
+  
+      .search {
+        display: flex;
+        align-items: center;
+        border: 0.5px solid lightgray;
+        width: 400px;
+        height: 40px;
+        justify-content: space-between;
+        border-radius:  0 10px 10px 0;
+  
+        input {
+          border: none;
+          outline: none;
+          background: transparent;
+          height: inherit;
+          width: 22rem;
+          padding-left: 20px;
+  
+          &::placeholder {
+            font-size: 14px;
+            color: #545F7D;
+            opacity: 0.7;
+          }
+          
+        }
+
+        .searchIcon {
+          background-color: #39CDCC;
+          padding-top: 8px;
+          padding-bottom: 7px; 
+          padding-left: 13px; 
+          padding-right: 13px; 
+          border-radius: inherit;
+          cursor: pointer;
+          
+        }
+      }
+    }
+  
+      .items {
+        display: flex;
+        align-items: center;
+
+        .bellIcon{
+          margin-right: 33.16px;
+          cursor: pointer;
+          .icon {
+            font-size: 30px;
+            color: #213F7D;
+          }
+        }
+  
+        .imgItem {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+          position: relative;
+          cursor: pointer;
+          
+  
+          .avatar {
+            width: 48px;
+            height: 50px;
+            border-radius: 50%;
+          }
+  
+        }
+        .name {
+          color: #213F7D;
+          font-size: 16px;
+          font-weight: 500;
+          margin-right: 10.33px;
+          cursor: pointer;
+        }
+
+        .navDropDown{
+          width: 7.34px;
+          height: 4.15px;
+          cursor: pointer;
+          
+        }
+        
+      }
+    }
+  }
+  
