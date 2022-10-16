@@ -12,12 +12,14 @@ const Home = () => {
       <div className="homeContainer">
         <Sidebar />
         <div className="homeRight">
-        <div className="widgetTitle">Users</div>
-          <div className="widgets">
-            <Widget type="user" />
-            <Widget type="active" />
-            <Widget type="loans" />
-            <Widget type="savings" />
+          <div>
+            <div className="widgetTitle">Users</div>
+              <div className="widgets">
+                <Widget type="user" />
+                <Widget type="active" />
+                <Widget type="loans" />
+                <Widget type="savings" />
+              </div>
           </div>
           <div className="listContainer">
             <TableSource />
