@@ -9,7 +9,6 @@
     color: #555;
     box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 
-    
     .wrapper {
       width: 100%;
       display: flex;
@@ -17,6 +16,16 @@
       justify-content: space-between;
       margin-left: 30px;
       margin-right: 70px;
+
+      @include tablet{
+        justify-content: flex-start;
+        gap: 70px;
+        max-width: 768px;
+      }
+
+      @include mobile{
+        justify-content: center;
+      }
 
       .navLeft{
         display: flex;
@@ -32,6 +41,11 @@
             margin-right: 17px;
 
           }
+
+          @include mobile{
+            margin-right: 0;
+            
+          }
           
         }
 
@@ -43,7 +57,17 @@
         width: 400px;
         height: 40px;
         justify-content: space-between;
-        border-radius:  0 10px 10px 0;
+        border-radius: 0 6px 6px 0;
+
+        @include tablet{
+          border-radius: 0;
+          width: 150px;
+
+        }
+
+        @include mobile{
+          display: none;
+        }
 
         
   
@@ -54,11 +78,19 @@
           height: inherit;
           width: 22rem;
           padding-left: 20px;
+
+          @include tablet{
+            padding-left: 0;
+            width: 150px;
+            
+  
+          }
   
           &::placeholder {
             font-size: 14px;
             color: #545F7D;
             opacity: 0.7;
+            
           }
           
         }
@@ -71,6 +103,12 @@
           padding-right: 13px; 
           border-radius: inherit;
           cursor: pointer;
+
+          @include tablet{
+            border-radius: 0 6px 6px 0;
+            
+          }
+          
           
         }
       }
@@ -90,9 +128,13 @@
           margin-right: 47px;
 
           @include tablet{
-            margin-right: 0px;
-            margin-left: 12px;
+            margin-right: 8px;
+            margin-left: 5px;
 
+          }
+
+          @include mobile{
+            display: none;
           }
         }
 
@@ -107,6 +149,10 @@
             @include tablet{
               margin-right: 0px;
     
+            }
+
+            @include mobile{
+              display: none;
             }
           }
         }
