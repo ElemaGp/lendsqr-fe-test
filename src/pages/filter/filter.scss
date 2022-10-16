@@ -1,0 +1,88 @@
+.filter{
+
+    .filterButton{
+        display: inline-flex;
+        background-color: aqua;
+        padding: 10px;
+        border-radius: 7px;
+        margin-top: 20px;
+        margin-left: 400px;
+        cursor: pointer;
+    
+        
+    }
+
+    .filterBox {
+        position: absolute;
+        width: 270px;
+        height: 600px;
+        left: 15px;
+        top: 60px;
+        background: #FFFFFF;
+        border: 1px solid rgba(84, 95, 125, 0.14);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+
+
+    .itemsContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 30px 20px 28px;
+        justify-content: space-between;
+
+        label{
+            margin-bottom: 6px;
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #545F7D;
+
+        }
+
+        input, select {
+            padding: 10px;
+            background: #FFFFFF;
+            opacity: 0.2;
+            border: 1px solid #213F7D;
+            border-radius: 8px;
+        }
+    
+        .selectStatus{
+            margin-bottom: 30px;
+        }
+        .boxBottom{
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+
+            .reset{
+                padding: 12px 30px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #545F7D;
+                border: solid;
+            }
+
+            .filter{
+                background: #39CDCC;
+                border: 1px solid #39CDCC;
+                border-radius: 8px;
+                box-sizing: border-box;
+                padding: 12px 30px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+  }
+ }
+}
