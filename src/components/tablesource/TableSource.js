@@ -108,7 +108,7 @@ const TableSource = () => {
         
       />
       
-      <Filter />
+      <Filter userRows = {userRows} />
     </div>
   )
 }
