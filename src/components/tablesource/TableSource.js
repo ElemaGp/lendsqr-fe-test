@@ -3,16 +3,19 @@ import { useEffect, useState } from "react";
 import "./tablesource.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Filter from "../../pages/filter/Filter";
+import User from "../../pages/user/User";
+import userx from "../../assets/userx.svg";
+import usergood from "../../assets/usergood.svg";
+import eye from "../../assets/eye.svg";
+import { Link } from "react-router-dom";
+
 
 
 const TableSource = () => {
     const [userRows, setUserRows] = useState([]);
     const [status, setStatus] = useState("pending");
-    // const [pending, setPending] = useState(false);
-    // const [blacklisted, setBlacklisted] = useState(true);
-    // const [active, setActive] = useState(false);
-    // const [inactive, setInactive] = useState(false);
+    const [shown, setShown] = useState(false);
+    
 
 
     useEffect(()=>{
@@ -27,6 +30,11 @@ const TableSource = () => {
         };
         getUsers();
       }, []);
+
+
+      const handleClick = event => {
+        setShown(current => !current);
+    };
 
 
 
@@ -67,14 +75,7 @@ const TableSource = () => {
               <div className={status === "active" ? 'cellWithStatus active' : 'cellWithStatus'}>Active</div>
               <div className={status === "inactive" ? 'cellWithStatus inactive' : 'cellWithStatus'}>Inactive</div>
               <div className={status === "blacklisted" ? 'cellWithStatus blacklisted' : 'cellWithStatus'}>Blacklisted</div>
-                {/* { pending && 'Pending' }
-                { blacklisted && 'Blacklisted' }
-                { active && 'Active' }
-                { inactive && 'Inactive' } */}
                 
-                 {/* {status === "active" ? 'Active' : ''}
-                 {status === "blacklisted" ? 'Blacklisted' : ''}
-                 {status === "inactive" ? 'Inactive' : ''} */}
 
               </div>
             );
@@ -88,7 +89,7 @@ const TableSource = () => {
             return (
              <div>
               <div className="dots">
-                <MoreVertIcon />
+                <MoreVertIcon  onClick={handleClick}/>
               </div>
             </div>
             );
@@ -97,7 +98,33 @@ const TableSource = () => {
       ];
 
   return (
+    
     <div className="datatable">
+
+          {shown && (
+                <div className="optionsBox">
+                  <div className="optionsWrapper">
+                    
+                    <Link to="/details">
+                      <span>
+                        <img src={eye} alt="view" />
+                        <p>View Details</p>
+                      </span>
+                    </Link>
+
+                    <span onClick={(e) => setStatus("blacklisted")}>
+                      <img src={userx} alt="blacklist user" />
+                      <p>Blacklist User</p>
+                    </span>
+
+                    <span onClick={(e) => setStatus("active")}>
+                    <img src={usergood} alt="activate user" />
+                    <p>Activate User</p>
+                    </span>
+
+                  </div>
+                </div>
+                )}
       
       <DataGrid
         className="datagrid"
@@ -108,7 +135,7 @@ const TableSource = () => {
         
       />
       
-      <Filter userRows = {userRows} />
+      <User userRows = {userRows} />
     </div>
   )
 }

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import './filter.scss'
+import React, { useEffect, useState } from 'react'
+import './user.scss'
 
-//User with filter
 
-const Filter = ({userRows}) => {
+
+const User = ({userRows}) => {
     const [isShown, setIsShown] = useState(false);
 
     const [orgName, setOrgName] = useState("");
@@ -12,7 +12,7 @@ const Filter = ({userRows}) => {
     const [date, setDate] = useState("");
     const [phone, setPhone] = useState("");
     const [status, setStatus] = useState("");
-    const [filteredOut, setfilteredOut] = useState("");
+    const [filteredOut, setfilteredOut] = useState({});
 
     let selected;
     
@@ -68,6 +68,8 @@ const Filter = ({userRows}) => {
         })
     }
 
+      
+
 
 
     const handleReset = (e) => {
@@ -90,6 +92,7 @@ const Filter = ({userRows}) => {
   return (
     <div className="filter">
         <span className='filterButton' onClick={handleClick}>{isShown ? "Remove filter box" : "Show filter box"}</span>
+
 
         {isShown && (
             <div id="filterBox" className="filterBox">
@@ -139,7 +142,7 @@ const Filter = ({userRows}) => {
       )
     }
     
-    export default Filter
+    export default User
             
         
         
