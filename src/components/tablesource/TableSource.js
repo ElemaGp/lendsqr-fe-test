@@ -36,6 +36,16 @@ const TableSource = () => {
         setShown(current => !current);
     };
 
+    const blacklisted = (id) => {
+      setStatus("blacklisted")
+    }; 
+
+    const active = (id) => {
+      setStatus("active")
+    }; 
+
+    
+
 
 
       //columns
@@ -64,60 +74,45 @@ const TableSource = () => {
           headerName: "DATE JOINED",
           width: 250,
         },
+        
         {
-          field: "status" ,
+          field: "status",
           headerName: "STATUS",
-          width: 150,
+          width: 250,
           renderCell: (params) => {
             return (
+              <>
+
               <div>
               <div className={status === "pending" ? 'cellWithStatus pending' : 'cellWithStatus'}>Pending</div>
               <div className={status === "active" ? 'cellWithStatus active' : 'cellWithStatus'}>Active</div>
               <div className={status === "inactive" ? 'cellWithStatus inactive' : 'cellWithStatus'}>Inactive</div>
               <div className={status === "blacklisted" ? 'cellWithStatus blacklisted' : 'cellWithStatus'}>Blacklisted</div>
-                
-
               </div>
-            );
-          },
-        },
-        {
-          field: "more" ,
-          headerName: "",
-          width: 100,
-          renderCell: () => {
-            return (
-             <div>
+
+
+
+              <div className="optionsContainer">
               <div className="dots">
                 <MoreVertIcon  onClick={handleClick}/>
               </div>
-            </div>
-            );
-          },
-        },
-      ];
-
-  return (
-    
-    <div className="datatable">
-
-          {shown && (
+              {shown && (
                 <div className="optionsBox">
                   <div className="optionsWrapper">
                     
-                    <Link to="/details">
+                  <Link to={{pathname: "/users/1", users: params.row }}>
                       <span>
                         <img src={eye} alt="view" />
                         <p>View Details</p>
                       </span>
                     </Link>
 
-                    <span onClick={(e) => setStatus("blacklisted")}>
+                    <span onClick={() => blacklisted(params.row.id)}>
                       <img src={userx} alt="blacklist user" />
                       <p>Blacklist User</p>
                     </span>
 
-                    <span onClick={(e) => setStatus("active")}>
+                    <span onClick={() => active(params.row.id)}>
                     <img src={usergood} alt="activate user" />
                     <p>Activate User</p>
                     </span>
@@ -125,13 +120,29 @@ const TableSource = () => {
                   </div>
                 </div>
                 )}
-      
+            </div>
+
+              </>
+            );
+          },
+        },
+
+      ];
+
+
+
+  return (
+    
+    <div className="datatable">
+
       <DataGrid
         className="datagrid"
         rows={userRows}
+        disableSelectionOnClick
         columns={userColumns}
         pageSize={9}
         rowsPerPageOptions={[9]}
+        getRowId={(r) => r.id}
         
       />
       

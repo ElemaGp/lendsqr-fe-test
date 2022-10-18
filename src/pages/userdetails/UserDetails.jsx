@@ -1,3 +1,4 @@
+
 import Details from "../../components/details/Details";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";

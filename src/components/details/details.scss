@@ -1,12 +1,198 @@
+
 .details{
 
-    .detailsBanner{
+    .detailsWrapper{
         
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        
+
+
+color: #545F7D;
+
+        .bannerTop{
+            margin-left: 60px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-around;
+            
+            .topDiv{
+
+                .backUsersText{
+                    margin-left: 15px;
+                }
+
+            }
+
+            .userActivities{
+                display: flex;
+                gap: 10px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                
+
+                
+            }
+
+        }
+        
+
+
+.bannerMiddle {
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 15px;
+    max-width: 1000px;
+    margin-left: 60px;
+
+   .middleWrapper{
+       display: flex;
+       gap: 40px;
+       align-items: center;
+       
+
+
+
+    .middleOne{
+        display: flex;
+        align-items: center;
+        
+        
+        
+    .middleUserImg{
+        padding: 35px;
+        color: #213F7D;
+        border-radius: 50%;
+        background-color: rgba(205, 209, 216, 0.6);
+        
+
+    }
+
+        .middleText{
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-bottom: 8px;
+            
+
+            .textName{
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 26px;
+                color: #213F7D;
+            }
+
+            .textAccountNum{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #545F7D;
+
+            }
+        }
+     }
+
+     .middleTwo{
+        display: flex;
+        flex-direction: column;
+        
+
+        .middleTwoText{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #545F7D;
+            margin-bottom: 10px;
+
+
+        }
+
+        .middleTwoStars{
+            display: flex;
+            gap: 6px;
+        }
+
+     }
+
+     .middleThree{
+        display: flex;
+        flex-direction: column;
+
+        .middleAccBalance{
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 26px;
+
+            color: #213F7D;
+        }
+
+        .middleBank{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #213F7D;
+
+
+        }
+
+     }
+
+    }
+   
+    .middleLower{
+        display: flex;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8);
+        justify-content: space-around;
+       
+
+
+    }
+    }
+
+    .bannerBottom{
+        margin-top: 60px;
         background: #FFFFFF;
         border: 1px solid rgba(33, 63, 125, 0.06);
         box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
         border-radius: 4px;
-        border: solid;
-            }
+    
+  }
+
+    p{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #213F7D;
+    }
+
+    .eachBottomSectionWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 17px;
+
+        .eachItem{
+            display: flex;
+            flex-direction: column;
+
         }
-        
+
+    }
+ }
+
+}
