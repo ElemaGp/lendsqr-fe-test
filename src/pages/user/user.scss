@@ -8,8 +8,11 @@
         margin-top: 20px;
         margin-left: 400px;
         cursor: pointer;
-    
         
+    }
+
+    .filtered{
+        margin-top: 70px;
     }
 
     .filterBox {
@@ -67,6 +70,7 @@
                 color: #545F7D;
                 border: solid;
                 cursor: pointer;
+                border-radius: 8px;
             }
 
             .filter{

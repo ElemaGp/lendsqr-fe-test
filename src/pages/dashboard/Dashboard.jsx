@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
 import TableSource from "../../components/tablesource/TableSource";
 
-const Home = () => {
+const Dashboard = () => {
   
   return (
     <div className="home">
@@ -31,4 +31,4 @@ const Home = () => {
   );
 }
 
-export default Home
+export default Dashboard
